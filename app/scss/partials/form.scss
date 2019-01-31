@@ -1,0 +1,44 @@
+@import '../partials/breakpoints.scss';
+
+.form {
+    max-width: 510px;
+    width: 100%;
+    margin: 0 auto;
+    @include respond-to(phone-down) {
+        max-width: 800px;
+    }
+
+    input, textarea {
+        background: #fff;
+        border: 0;
+        font-family: freight-sans-pro, Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .wpcf7-form {
+        display: block;
+        position: relative;
+        top: -100px;
+    }
+
+    .wpcf7-form-control-wrap {
+        position: relative;
+        width: 100%;
+        display: block;
+    }
+
+    input.wpcf7-form-control.wpcf7-submit{
+        padding: 8px;
+        background: #55c698;
+        color: #fff;
+        width: 100%;
+        text-align: center;
+        display: block;
+        position: relative;
+        font-weight: bold;
+        font-size: 20px;
+        transition: all 0.2s;
+    }
+}

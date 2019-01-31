@@ -1,0 +1,174 @@
+@import '../../../scss/partials/breakpoints.scss';
+
+.hero {
+    &__app {
+        left: 0;
+        width: 100%;
+        margin: 0 auto;
+        position: absolute;
+        right: 0;
+        top: 65vh;
+        z-index: 3;
+        @include respond-to(phone-down) {
+            max-width: auto;   
+            width: 100%;
+            left: 0;
+            top: 65vh;
+        }
+        &-img {
+            background: url('/wp-content/uploads/2018/10/iphoneX-perspective.png');
+            background-repeat: no-repeat;
+            background-size: 700px;
+            background-position: center center;
+            display: block;
+            height: 500px;
+            width: 100%;
+            margin-left: -700px;
+            opacity: 0;
+            @include respond-to(phone-down) {
+                background-size: 500px;
+            }
+        }
+    }
+
+    &__background {
+        background: url('/wp-content/uploads/2018/11/hero-background.png');
+        // background: url('../images/hero-background.png');
+        animation: movingBackground 45s infinite;
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom -200px center;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+        z-index: 0;
+    }
+
+    &__backgroundOverlay {
+        background: url('/wp-content/uploads/2018/11/hero-background-overlay.png');
+        // background: url('../images/hero-background-overlay.png');
+        animation: movingBackgroundOverlay 45s infinite;
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+        z-index: 0;
+    }
+
+    &__wrapper {
+        background: transparent;
+        display: table;
+        width: 100%;
+        height: 100vh;
+    }
+
+    
+    &__content {
+        text-align: center;
+        width: 100%;
+        max-width: 1000px;
+        @include respond-to(phone-down) {
+            padding-top: 20px;
+        }
+    }
+
+    &__logo {
+        opacity: 0;
+        margin-top: -100px;
+        width: 100%;
+    }
+
+    &__logo-wrapper {
+        max-width: 400px;
+        margin: 0 auto;
+        min-height: 190px;
+        padding: 40px 40px 0 40px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 10vh;
+        width: 100%;
+        z-index: 6;
+        @include respond-to(phone-down) {
+            min-height: 0;
+        }
+    }
+
+    &__tagline {
+        display: table-cell;
+        min-height: 100px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 10px;
+        position: relative;
+        text-align: center;
+        vertical-align: middle;
+        @include respond-to(phone-down) {
+            width: 100%;
+        }
+
+        &-border {
+            &--bottom {
+                // animation: fadingColors infinite 3s;
+                background: linear-gradient(180deg,#1e849d -60%,#53c697 120%);
+                border-radius: 2px;
+                height: 2px;
+                width: 0px;
+                margin: 0 auto;
+                opacity: 0;
+                @include respond-to(phone-down) {
+                    max-width: 270px !important;
+                }
+            }
+        }
+       }
+       
+    &__tagline-text {
+        display: block;
+        font-size: 2rem;
+        line-height: 2rem;
+        margin-bottom: 5px;
+        @include respond-to(phone-down) {
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+        }
+
+        &--one {
+            opacity: 0;
+            margin-left: 300px;
+            width: 100%;
+            padding-bottom: 10px;
+        }
+
+        &--two {
+            display: inline-block;
+            opacity: 0;
+            font-family: 'metropolisbold', freight-sans-pro;
+            width: 100%;
+            margin-left: 600px;
+            padding-bottom: 10px;
+        }
+    }
+}
+
+@keyframes movingBackgroundOverlay {
+    0% { transform: scale(1.1); opacity: 1}
+    50% { transform: scale(1);}
+    90% {  opacity: 1;}
+    100% { transform: scale(1.4); opacity: 0;}
+  }
+
+@keyframes movingBackground {
+    0% { transform: scale(1); opacity: 0;}
+    5% { opacity: 0.6;}
+    90% { opacity: 1; }
+    100% { transform: scale(1.5); opacity: 0; height: 180vh}
+}

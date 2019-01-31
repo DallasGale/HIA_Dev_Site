@@ -1,0 +1,79 @@
+@import '../../../scss/partials/breakpoints.scss';
+
+.media {
+
+  &__date {
+    color: #3f4e55;
+    display: block;
+    font-size: 0.6rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+    &:hover {
+      text-decoration: none !important
+    }
+  }
+
+  &__description {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  &__image {
+    height: auto;
+    width: 100%;
+    padding: 20px 0;
+    margin: 0 auto;
+
+    &-wrap {
+      border-radius: 10px;
+      text-align: center;
+    }
+  }
+
+  &__card {
+    border-radius: 2px;
+    background-color: #fff;
+    margin-bottom: 60px;
+    min-height: 410px;
+    padding: 20px;
+    transition: all 0.1s;
+    @include respond-to(phone-down) {
+      min-height: 0;
+    }
+
+    &:hover {
+      background-color: white;
+      box-shadow: 0px 2px 18px -5px rgba(0,0,0,0.78);
+      transition: all 0.1s;
+    }
+  }
+
+  &__title {
+    border-bottom: 2px dotted #e4e4e4;
+    color: rgba(0,0,0,0.7);
+    font-weight: 600;
+    font-size: 1rem;
+    padding-bottom: 10px;
+    @include respond-to(desktop-down) {
+      font-size: 1rem;
+    }
+  }
+
+  &__url {
+    transition: all 0.1s;
+    &:hover {
+      color: #3aa97c;
+      text-decoration: none;
+      transition: all 0.1s;
+    }
+  }
+
+
+  &__wrapper {
+    // background: #4bbd8f url('../images/hero-background-overlay-wh.png') bottom right no-repeat;
+    background: #4bbd8f url('/wp-content/uploads/2018/11/hero-background-overlay-wh.png') bottom right no-repeat;
+    background-size: 1500px;
+    background-attachment: fixed;
+  }
+
+}

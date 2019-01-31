@@ -1,0 +1,29 @@
+@import './breakpoints.scss';
+
+.page {
+    &__title {
+        font-weight: 200;
+        font-size: 3.5rem;
+        line-height: 3rem;
+        padding-bottom: 50px;
+        padding-top: 50px;
+        text-transform: none;
+        text-align: center;
+
+        @include respond-to(phone-down) {
+            font-size: 2rem;
+            line-height: 2rem;
+            text-align: left;
+            padding-bottom: 20px;
+        }
+    }
+}
+
+
+.bolder {
+    font-weight: 700;
+}
+
+.color-primary {
+    color: #373f49;
+}

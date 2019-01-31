@@ -1,0 +1,62 @@
+@import '../../../scss/partials/breakpoints.scss';
+
+.team {
+    &__bio {
+        margin-top: 20px;
+        padding-bottom: 50px;
+
+        &--paragraph {
+        }
+    }
+
+    &__content {
+        max-width: 900px;
+        margin: 0 auto;
+        padding-bottom: 100px;
+        @include respond-to(phone-down) {
+            padding-bottom: 0;
+        }
+    }
+
+    &__head-shot {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 0 30px;
+        @include respond-to(phone-down) {
+            max-width: 150px;
+            padding: 0 0;
+        }
+    }
+
+    &__position {
+        font-size: 1.2rem;
+        font-weight: 400;
+        @include respond-to(phone-down) {
+            font-size: 1rem;
+        }
+    }
+
+    &__row {
+        display: block;
+        padding-bottom: 100px;
+        position: relative;
+        @include respond-to(phone-down) {
+            padding-bottom: 20px;
+        }
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1.7rem;
+        margin-bottom: 0;
+        @include respond-to(phone-down) {
+            font-size: 1rem;
+        }
+    }
+
+    &__wrapper {
+        background:#fbfbfb;
+    }
+}

@@ -1,0 +1,43 @@
+@import '../../../scss/partials/breakpoints.scss';
+
+.about {
+    &__content {
+        color: #fff;
+        font-size: 1.1rem;
+        max-width: 800px;
+        margin: 0 auto;
+        padding-top: 100px;
+        text-align: center;
+        @include respond-to(phone-down) {
+            font-size: 0.8rem;
+            padding-top: 60px;
+        }
+    }
+
+    &__paragraph {
+        font-size: 1.1rem;
+        font-weight: 600;
+        line-height: 1.7rem;
+        @include respond-to(phone-down) {
+            font-size: 0.9rem;
+            line-height: 1.5rem;
+        }
+     }
+
+    &__promo-video {
+        padding: 60px 0;
+    }
+       
+    &__wrapper {
+        // background: #55c698 url('../images/hero-background-wh.png') center center no-repeat;
+        background: #55c698 url('/wp-content/uploads/2018/11/hero-background-wh.png') center center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 100px;
+        position: relative;
+        z-index: 1;
+        @include respond-to(phone-down) {
+            padding: 20px;
+        }
+    }
+}

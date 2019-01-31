@@ -1,0 +1,17 @@
+@import '../../../scss/partials/breakpoints.scss';
+
+.video {
+    &__wrapper {
+        // background: #55c698 url('../images/hero-background-wh.png') center center no-repeat;
+        background: #55c698 url('/wp-content/uploads/2018/11/hero-background-wh.png') center center no-repeat;
+    }
+
+    &__screenshot {
+        width: 900;
+        height: 505px;
+        // background: url('../images/promo-vid.png') no-repeat center center;
+        background: url('/wp-content/uploads/2018/11/hero-background-overlay-wh.png') no-repeat center center;
+        background-size: 900px;
+    }
+
+}

@@ -1,0 +1,23 @@
+@import '../partials/breakpoints.scss';
+
+.contact {
+
+    &__wrapper {
+        background-color: #f1f1f1;
+
+
+        .page__title {
+            text-align: center;
+        }
+    }
+
+    &__logo {
+        max-width: 150px;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        @include respond-to(phone-down) {
+            width: 60px;
+        }
+    }
+}

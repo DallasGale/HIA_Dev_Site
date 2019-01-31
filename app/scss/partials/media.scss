@@ -1,0 +1,12 @@
+@import './breakpoints.scss';
+
+.media {
+    &__wrapper {
+        display: block;
+        position: relative;
+        padding: 100px;
+        @include respond-to(tablet-down) {
+            padding: 20px;
+        }
+    }
+}
